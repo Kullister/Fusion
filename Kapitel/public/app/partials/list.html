@@ -1,0 +1,28 @@
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Vorname</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="student in listController.studenten">
+            <td>{{student.Name}}</td>
+            <td>{{student.Vorname}}</td>
+            <td>
+                <a ui-sref="form({id: student.id})">
+                    Edit
+                </a>
+            </td>
+            <td>
+                <a ui-sref="delete({id: student.id})">
+                    Delete
+                </a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<a ui-sref="form()">New</a>
